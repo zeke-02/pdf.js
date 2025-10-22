@@ -480,6 +480,7 @@ class PDFFindController {
   }
 
   #onFind(state) {
+    console.log("[pdf.js], onFind");
     if (!state) {
       return;
     }
@@ -960,6 +961,7 @@ class PDFFindController {
   }
 
   #nextMatch() {
+    console.log("[pdf.js], nextMatch");
     const previous = this.#state.findPrevious;
     const currentPageIndex = this._linkService.page - 1;
     const numPages = this._linkService.pagesCount;
